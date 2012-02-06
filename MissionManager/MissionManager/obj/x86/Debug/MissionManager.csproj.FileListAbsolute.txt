@@ -1,0 +1,10 @@
+C:\dev\MissionManager\MissionManager\MissionManager\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\dev\MissionManager\MissionManager\MissionManager\obj\x86\Debug\MissionManager.Form1.resources
+C:\dev\MissionManager\MissionManager\MissionManager\obj\x86\Debug\MissionManager.Properties.Resources.resources
+C:\dev\MissionManager\MissionManager\MissionManager\obj\x86\Debug\MissionManager.Message.resources
+C:\dev\MissionManager\MissionManager\MissionManager\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\dev\MissionManager\MissionManager\MissionManager\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\dev\MissionManager\MissionManager\MissionManager\bin\Debug\MissionManager.exe
+C:\dev\MissionManager\MissionManager\MissionManager\bin\Debug\MissionManager.pdb
+C:\dev\MissionManager\MissionManager\MissionManager\obj\x86\Debug\MissionManager.exe
+C:\dev\MissionManager\MissionManager\MissionManager\obj\x86\Debug\MissionManager.pdb
