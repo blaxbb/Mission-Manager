@@ -8,3 +8,4 @@ C:\dev\MissionManager\MissionManager\MissionManager\bin\Debug\MissionManager.exe
 C:\dev\MissionManager\MissionManager\MissionManager\bin\Debug\MissionManager.pdb
 C:\dev\MissionManager\MissionManager\MissionManager\obj\x86\Debug\MissionManager.exe
 C:\dev\MissionManager\MissionManager\MissionManager\obj\x86\Debug\MissionManager.pdb
+C:\dev\MissionManager\MissionManager\MissionManager\obj\x86\Debug\MissionManager.Person.resources
