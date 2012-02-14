@@ -28,13 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.Container = new System.Windows.Forms.SplitContainer();
+            this.Container1 = new System.Windows.Forms.SplitContainer();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.getMessagesButton = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.Container2 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.personellTab = new System.Windows.Forms.TabPage();
             this.personnelToolStrip = new System.Windows.Forms.ToolStrip();
+            this.newPersonButton = new System.Windows.Forms.ToolStripButton();
+            this.openPersonsButton = new System.Windows.Forms.ToolStripButton();
+            this.savePersonsButton = new System.Windows.Forms.ToolStripButton();
             this.personLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.mapTab = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -42,15 +48,14 @@
             this.charCountLabel = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.messageTextBox = new System.Windows.Forms.TextBox();
-            this.newPersonButton = new System.Windows.Forms.ToolStripButton();
-            this.openPersonsButton = new System.Windows.Forms.ToolStripButton();
-            this.savePersonsButton = new System.Windows.Forms.ToolStripButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.Container)).BeginInit();
-            this.Container.Panel1.SuspendLayout();
-            this.Container.Panel2.SuspendLayout();
-            this.Container.SuspendLayout();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Container1)).BeginInit();
+            this.Container1.Panel1.SuspendLayout();
+            this.Container1.Panel2.SuspendLayout();
+            this.Container1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Container2)).BeginInit();
             this.Container2.Panel1.SuspendLayout();
             this.Container2.Panel2.SuspendLayout();
@@ -60,34 +65,55 @@
             this.personnelToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Container
+            // Container1
             // 
-            this.Container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Container.Location = new System.Drawing.Point(0, 0);
-            this.Container.Name = "Container";
+            this.Container1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Container1.Location = new System.Drawing.Point(0, 0);
+            this.Container1.Name = "Container1";
             // 
-            // Container.Panel1
+            // Container1.Panel1
             // 
-            this.Container.Panel1.Controls.Add(this.tableLayoutPanel1);
+            this.Container1.Panel1.Controls.Add(this.toolStrip1);
+            this.Container1.Panel1.Controls.Add(this.tableLayoutPanel1);
             // 
-            // Container.Panel2
+            // Container1.Panel2
             // 
-            this.Container.Panel2.Controls.Add(this.Container2);
-            this.Container.Size = new System.Drawing.Size(759, 593);
-            this.Container.SplitterDistance = 251;
-            this.Container.TabIndex = 0;
+            this.Container1.Panel2.Controls.Add(this.Container2);
+            this.Container1.Size = new System.Drawing.Size(759, 593);
+            this.Container1.SplitterDistance = 251;
+            this.Container1.TabIndex = 0;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.getMessagesButton});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(251, 25);
+            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // getMessagesButton
+            // 
+            this.getMessagesButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.getMessagesButton.Image = ((System.Drawing.Image)(resources.GetObject("getMessagesButton.Image")));
+            this.getMessagesButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.getMessagesButton.Name = "getMessagesButton";
+            this.getMessagesButton.Size = new System.Drawing.Size(83, 22);
+            this.getMessagesButton.Text = "Get Messages";
+            this.getMessagesButton.Click += new System.EventHandler(this.getMessagesButton_Click);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AutoScroll = true;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 22);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(251, 593);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(251, 571);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // Container2
@@ -146,6 +172,36 @@
             this.personnelToolStrip.Size = new System.Drawing.Size(490, 25);
             this.personnelToolStrip.TabIndex = 0;
             this.personnelToolStrip.Text = "toolStrip1";
+            // 
+            // newPersonButton
+            // 
+            this.newPersonButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.newPersonButton.Image = ((System.Drawing.Image)(resources.GetObject("newPersonButton.Image")));
+            this.newPersonButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.newPersonButton.Name = "newPersonButton";
+            this.newPersonButton.Size = new System.Drawing.Size(23, 22);
+            this.newPersonButton.Text = "&New";
+            this.newPersonButton.Click += new System.EventHandler(this.newPersonButton_Click);
+            // 
+            // openPersonsButton
+            // 
+            this.openPersonsButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.openPersonsButton.Image = ((System.Drawing.Image)(resources.GetObject("openPersonsButton.Image")));
+            this.openPersonsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.openPersonsButton.Name = "openPersonsButton";
+            this.openPersonsButton.Size = new System.Drawing.Size(23, 22);
+            this.openPersonsButton.Text = "&Open";
+            this.openPersonsButton.Click += new System.EventHandler(this.openPersonsButton_Click);
+            // 
+            // savePersonsButton
+            // 
+            this.savePersonsButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.savePersonsButton.Image = ((System.Drawing.Image)(resources.GetObject("savePersonsButton.Image")));
+            this.savePersonsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.savePersonsButton.Name = "savePersonsButton";
+            this.savePersonsButton.Size = new System.Drawing.Size(23, 22);
+            this.savePersonsButton.Text = "&Save";
+            this.savePersonsButton.Click += new System.EventHandler(this.savePersonsButton_Click_1);
             // 
             // personLayoutPanel
             // 
@@ -224,52 +280,31 @@
             this.messageTextBox.TabIndex = 0;
             this.messageTextBox.TextChanged += new System.EventHandler(this.messageTextBox_TextChanged);
             // 
-            // newPersonButton
-            // 
-            this.newPersonButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.newPersonButton.Image = ((System.Drawing.Image)(resources.GetObject("newPersonButton.Image")));
-            this.newPersonButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.newPersonButton.Name = "newPersonButton";
-            this.newPersonButton.Size = new System.Drawing.Size(23, 22);
-            this.newPersonButton.Text = "&New";
-            this.newPersonButton.Click += new System.EventHandler(this.newPersonButton_Click);
-            // 
-            // openPersonsButton
-            // 
-            this.openPersonsButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.openPersonsButton.Image = ((System.Drawing.Image)(resources.GetObject("openPersonsButton.Image")));
-            this.openPersonsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.openPersonsButton.Name = "openPersonsButton";
-            this.openPersonsButton.Size = new System.Drawing.Size(23, 22);
-            this.openPersonsButton.Text = "&Open";
-            this.openPersonsButton.Click += new System.EventHandler(this.openPersonsButton_Click);
-            // 
-            // savePersonsButton
-            // 
-            this.savePersonsButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.savePersonsButton.Image = ((System.Drawing.Image)(resources.GetObject("savePersonsButton.Image")));
-            this.savePersonsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.savePersonsButton.Name = "savePersonsButton";
-            this.savePersonsButton.Size = new System.Drawing.Size(23, 22);
-            this.savePersonsButton.Text = "&Save";
-            this.savePersonsButton.Click += new System.EventHandler(this.savePersonsButton_Click_1);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 593);
-            this.Controls.Add(this.Container);
+            this.Controls.Add(this.Container1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Container.Panel1.ResumeLayout(false);
-            this.Container.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Container)).EndInit();
-            this.Container.ResumeLayout(false);
+            this.Container1.Panel1.ResumeLayout(false);
+            this.Container1.Panel1.PerformLayout();
+            this.Container1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Container1)).EndInit();
+            this.Container1.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.Container2.Panel1.ResumeLayout(false);
             this.Container2.Panel2.ResumeLayout(false);
             this.Container2.Panel2.PerformLayout();
@@ -286,7 +321,7 @@
 
         #endregion
 
-        private System.Windows.Forms.SplitContainer Container;
+        private System.Windows.Forms.SplitContainer Container1;
         private System.Windows.Forms.SplitContainer Container2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage personellTab;
@@ -304,6 +339,9 @@
         private System.Windows.Forms.ToolStripButton savePersonsButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton getMessagesButton;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

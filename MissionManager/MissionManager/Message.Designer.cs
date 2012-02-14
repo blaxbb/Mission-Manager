@@ -28,48 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.messageLabel = new System.Windows.Forms.Label();
+            this.replyButton = new System.Windows.Forms.Button();
+            this.forwardButton = new System.Windows.Forms.Button();
+            this.senderLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // messageLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.messageLabel.AutoSize = true;
+            this.messageLabel.Location = new System.Drawing.Point(4, 4);
+            this.messageLabel.Name = "messageLabel";
+            this.messageLabel.Size = new System.Drawing.Size(66, 13);
+            this.messageLabel.TabIndex = 0;
+            this.messageLabel.Text = "No message";
             // 
-            // button1
+            // replyButton
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(313, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.replyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.replyButton.Location = new System.Drawing.Point(313, 3);
+            this.replyButton.Name = "replyButton";
+            this.replyButton.Size = new System.Drawing.Size(75, 23);
+            this.replyButton.TabIndex = 1;
+            this.replyButton.Text = "Reply";
+            this.replyButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // forwardButton
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(313, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.forwardButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwardButton.Location = new System.Drawing.Point(232, 3);
+            this.forwardButton.Name = "forwardButton";
+            this.forwardButton.Size = new System.Drawing.Size(75, 23);
+            this.forwardButton.TabIndex = 2;
+            this.forwardButton.Text = "Forward";
+            this.forwardButton.UseVisualStyleBackColor = true;
+            // 
+            // senderLabel
+            // 
+            this.senderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.senderLabel.Location = new System.Drawing.Point(232, 38);
+            this.senderLabel.Name = "senderLabel";
+            this.senderLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.senderLabel.Size = new System.Drawing.Size(161, 23);
+            this.senderLabel.TabIndex = 3;
+            this.senderLabel.Text = "sender";
+            this.senderLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Message
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.senderLabel);
+            this.Controls.Add(this.forwardButton);
+            this.Controls.Add(this.replyButton);
+            this.Controls.Add(this.messageLabel);
             this.Name = "Message";
             this.Size = new System.Drawing.Size(391, 61);
             this.ResumeLayout(false);
@@ -79,8 +92,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label messageLabel;
+        private System.Windows.Forms.Button replyButton;
+        private System.Windows.Forms.Button forwardButton;
+        private System.Windows.Forms.Label senderLabel;
     }
 }

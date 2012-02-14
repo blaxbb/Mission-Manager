@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OpenPop">
+      <HintPath>..\..\..\..\Users\brian\Downloads\OpenPop.NET 2.0.4\binaries\signed (strong name)\OpenPop.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,6 +55,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IncomingMailArgs.cs" />
+    <Compile Include="IncomingMailHandler.cs" />
     <Compile Include="Person.cs">
       <SubType>UserControl</SubType>
     </Compile>
